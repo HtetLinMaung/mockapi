@@ -76,5 +76,32 @@
       "status": 200,
       "body": {}
     }
+  },
+  {
+    "url": "/v1/users/cards",
+    "method": "get",
+    "query": {
+      "page": {
+        "required": true
+      },
+      "size": {
+        "required": true
+      },
+      "sort": {
+        "required": true
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": [
+        {
+          "expiry": "10/24",
+          "masked_pan": "*1233",
+          "default_card": "true, false",
+          "token_expiry": "string",
+          "token_pan": 0
+        }
+      ]
+    }
   }
 ]
