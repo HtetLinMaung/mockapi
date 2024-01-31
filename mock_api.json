@@ -86,24 +86,44 @@
     },
     "query": {
       "userid": {
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       }
     },
     "body": {
       "email": {
         "type": "string",
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       },
       "mobile": {
-        "type": "number"
+        "type": "number",
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       },
       "first_name": {
         "type": "string",
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       },
       "last_name": {
         "type": "string",
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       }
     },
     "response": {
