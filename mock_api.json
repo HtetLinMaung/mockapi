@@ -17,24 +17,44 @@
     "method": "put",
     "headers": {
       "idempotency-key": {
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       }
     },
     "body": {
       "email": {
         "type": "string",
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       },
       "mobile": {
-        "type": "number"
+        "type": "number",
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       },
       "first_name": {
         "type": "string",
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       },
       "last_name": {
         "type": "string",
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       }
     },
     "response": {
@@ -47,7 +67,11 @@
     "method": "post",
     "headers": {
       "idempotency-key": {
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       }
     },
     "query": {
@@ -114,6 +138,103 @@
           "token_pan": 0
         }
       ]
+    }
+  },
+  {
+    "url": "/v1/users/cards",
+    "method": "put",
+    "query": {
+      "token_pan": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "token_expiry": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "headers": {
+      "idempotency-key": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": [
+        {
+          "expiry": "10/24",
+          "masked_pan": "*1233",
+          "default_card": "true, false",
+          "token_expiry": "string",
+          "token_pan": 0
+        }
+      ]
+    }
+  },
+  {
+    "url": "/v1/users/cards",
+    "method": "post",
+    "headers": {
+      "idempotency-key": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "body": {
+      "pan": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "expiry": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "cvv": {
+        "type": "number",
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "payment_type": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {
+        "expiry": "10/24",
+        "masked_pan": "*1233",
+        "default_card": "true, false",
+        "token_expiry": "string",
+        "token_pan": 0
+      }
     }
   }
 ]
