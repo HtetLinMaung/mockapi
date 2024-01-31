@@ -52,9 +52,7 @@ async function main() {
                   res.setHeader(hk, hv as string);
                 }
               }
-              return res
-                .status(apiData.response.status || 400)
-                .json(apiData.response.body);
+              return res.status(response.status || 400).json(response.body);
             }
           }
         }
@@ -67,9 +65,7 @@ async function main() {
                   res.setHeader(hk, hv as string);
                 }
               }
-              return res
-                .status(apiData.response.status || 400)
-                .json(apiData.response.body);
+              return res.status(response.status || 400).json(response.body);
             }
           }
         }
@@ -82,9 +78,7 @@ async function main() {
                   res.setHeader(hk, hv as string);
                 }
               }
-              return res
-                .status(apiData.response.status || 400)
-                .json(apiData.response.body);
+              return res.status(response.status || 400).json(response.body);
             }
           }
         }

@@ -82,13 +82,25 @@
     "method": "get",
     "query": {
       "page": {
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       },
       "size": {
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       },
       "sort": {
-        "required": true
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
       }
     },
     "response": {
