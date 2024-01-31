@@ -59,7 +59,7 @@ async function main() {
         if (apiData.query) {
           for (const [k, vd] of Object.entries(apiData.query)) {
             const { required, response } = vd as IValidation;
-            if (required && !req.body[k]) {
+            if (required && !req.query[k]) {
               if (response.headers) {
                 for (const [hk, hv] of Object.entries(response.headers)) {
                   res.setHeader(hk, hv as string);
@@ -72,7 +72,7 @@ async function main() {
         if (apiData.headers) {
           for (const [k, vd] of Object.entries(apiData.headers)) {
             const { required, response } = vd as IValidation;
-            if (required && !req.body[k]) {
+            if (required && !req.headers[k]) {
               if (response.headers) {
                 for (const [hk, hv] of Object.entries(response.headers)) {
                   res.setHeader(hk, hv as string);
