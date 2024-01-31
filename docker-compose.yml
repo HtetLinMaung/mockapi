@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  mockapi:
+    image: htetlinmaung/mockapi
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./mock_api.json:/app/mock_api.json

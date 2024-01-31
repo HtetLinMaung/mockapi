@@ -1,0 +1,80 @@
+[
+  {
+    "url": "/v1/users",
+    "method": "get",
+    "response": {
+      "status": 200,
+      "body": {
+        "email": "string",
+        "mobile": 0,
+        "first_name": "string",
+        "last_name": "string"
+      }
+    }
+  },
+  {
+    "url": "/v1/users",
+    "method": "put",
+    "headers": {
+      "idempotency-key": {
+        "required": true
+      }
+    },
+    "body": {
+      "email": {
+        "type": "string",
+        "required": true
+      },
+      "mobile": {
+        "type": "number"
+      },
+      "first_name": {
+        "type": "string",
+        "required": true
+      },
+      "last_name": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {}
+    }
+  },
+  {
+    "url": "/v1/users",
+    "method": "post",
+    "headers": {
+      "idempotency-key": {
+        "required": true
+      }
+    },
+    "query": {
+      "userid": {
+        "required": true
+      }
+    },
+    "body": {
+      "email": {
+        "type": "string",
+        "required": true
+      },
+      "mobile": {
+        "type": "number"
+      },
+      "first_name": {
+        "type": "string",
+        "required": true
+      },
+      "last_name": {
+        "type": "string",
+        "required": true
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {}
+    }
+  }
+]
