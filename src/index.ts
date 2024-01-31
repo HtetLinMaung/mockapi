@@ -46,7 +46,7 @@ async function main() {
         if (apiData.body) {
           for (const [k, vd] of Object.entries(apiData.body)) {
             const { type, required, response } = vd as IValidation;
-            if ((required && !req.body[k]) || typeof req.body !== type) {
+            if ((required && !req.body[k]) || typeof req.body[k] !== type) {
               if (response.headers) {
                 for (const [hk, hv] of Object.entries(response.headers)) {
                   res.setHeader(hk, hv as string);
