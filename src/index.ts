@@ -38,7 +38,7 @@ async function main() {
     "utf-8"
   );
   const apiList: IApiData[] = JSON.parse(jsonString);
-  console.log(apiList);
+  //   console.log(apiList);
   for (const apiData of apiList) {
     (app as any)[apiData.method](
       apiData.url,
