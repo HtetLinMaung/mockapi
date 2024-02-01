@@ -258,5 +258,45 @@
         "token_pan": 0
       }
     }
+  },
+  {
+    "url": "/v1/users/cards",
+    "method": "delete",
+    "headers": {
+      "idempotency-key": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "query": {
+      "userid": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "token_pan": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "token_expiry": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {}
+    }
   }
 ]
