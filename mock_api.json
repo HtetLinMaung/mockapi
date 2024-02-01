@@ -453,5 +453,107 @@
         }
       ]
     }
+  },
+  {
+    "url": "/v1/users/privileges",
+    "method": "post",
+    "body": {
+      "expiry_date_time": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "privilege_code": {
+        "type": "string",
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "privilege_details": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "privilege_value": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "privilege_status": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "carpark": {
+        "type": "object",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {}
+    }
+  },
+  {
+    "url": "/v1/users/privileges",
+    "method": "get",
+    "query": {
+      "page": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "size": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "sort": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": [
+        {
+          "expiry_date_time": "string",
+          "privilege_code": "string",
+          "privilege_details": "string",
+          "privilege_value": "string",
+          "privilege_status": "NOT_USED, USED, VOIDED",
+          "carpark": {
+            "location_code": "string",
+            "location": "The long, lat location:\n[\"1.3051821,103.9129121\"]",
+            "available_lots": 0,
+            "supported_carpark": "True"
+          }
+        }
+      ]
+    }
   }
 ]
