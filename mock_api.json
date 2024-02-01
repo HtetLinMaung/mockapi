@@ -401,5 +401,57 @@
         "token_pan": 0
       }
     }
+  },
+  {
+    "url": "/v1/users/carparks",
+    "method": "get",
+    "query": {
+      "page": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "size": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "sort": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "location_bounds": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "lot_type": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": [
+        {
+          "location_code": "string",
+          "location": "The long, lat location:\n[\"1.3051821,103.9129121\"]",
+          "available_lots": 0,
+          "supported_carpark": "True"
+        }
+      ]
+    }
   }
 ]
