@@ -200,15 +200,7 @@
     },
     "response": {
       "status": 200,
-      "body": [
-        {
-          "expiry": "10/24",
-          "masked_pan": "*1233",
-          "default_card": "true, false",
-          "token_expiry": "string",
-          "token_pan": 0
-        }
-      ]
+      "body": {}
     }
   },
   {
