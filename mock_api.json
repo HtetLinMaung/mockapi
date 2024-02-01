@@ -298,5 +298,108 @@
       "status": 200,
       "body": {}
     }
+  },
+  {
+    "url": "/v1/users/vehicles",
+    "method": "get",
+    "query": {
+      "page": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "size": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "sort": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": [
+        {
+          "vehicle_no": "string",
+          "vehicle_iu_no": "string"
+        }
+      ]
+    }
+  },
+  {
+    "url": "/v1/users/vehicles",
+    "method": "post",
+    "headers": {
+      "idempotency-key": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "body": {
+      "vehicle_no": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "vehicle_iu_no": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {}
+    }
+  },
+  {
+    "url": "/v1/users/vehicles",
+    "method": "delete",
+    "headers": {
+      "idempotency-key": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "query": {
+      "vehicle_no": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {
+        "expiry": "10/24",
+        "masked_pan": "*1233",
+        "default_card": "true, false",
+        "token_expiry": "string",
+        "token_pan": 0
+      }
+    }
   }
 ]
