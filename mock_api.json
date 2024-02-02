@@ -555,5 +555,41 @@
         }
       ]
     }
+  },
+  {
+    "url": "/v1/users/notices",
+    "method": "get",
+    "query": {
+      "page": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "size": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "sort": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": [
+        {
+          "notice_id": 0,
+          "notice": "string"
+        }
+      ]
+    }
   }
 ]
