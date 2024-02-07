@@ -5,10 +5,10 @@
     "response": {
       "status": 200,
       "body": {
-        "email": "string",
-        "mobile": 0,
-        "first_name": "string",
-        "last_name": "string"
+        "email": "petertan@gmail.com",
+        "mobile": 91234567,
+        "first_name": "Peter",
+        "last_name": "Tan"
       }
     }
   },
@@ -161,9 +161,9 @@
       "status": 200,
       "body": [
         {
-          "expiry": "10/24",
-          "masked_pan": "*1233",
-          "default_card": "true, false",
+          "expiry": "11/28",
+          "masked_pan": "2*** **** **** *305",
+          "default_card": "true",
           "token_expiry": "string",
           "token_pan": 0
         }
@@ -329,8 +329,12 @@
       "status": 200,
       "body": [
         {
-          "vehicle_no": "string",
-          "vehicle_iu_no": "string"
+          "vehicle_no": "SBC123A",
+          "vehicle_iu_no": "1234567890"
+        },
+        {
+          "vehicle_no": "SBC123A",
+          "vehicle_iu_no": "1234567890"
         }
       ]
     }
@@ -446,10 +450,16 @@
       "status": 200,
       "body": [
         {
-          "location_code": "string",
-          "location": "The long, lat location:\n[\"1.3051821,103.9129121\"]",
-          "available_lots": 0,
+          "location_code": "The Pier",
+          "location": "80 Mohamed Sultan Road, S239013",
+          "available_lots": 56,
           "supported_carpark": "True"
+        },
+        {
+          "location_code": "Sultan Link",
+          "location": "59 Mohamed Sultan Rd, S238999",
+          "available_lots": 72,
+          "supported_carpark": "False"
         }
       ]
     }
