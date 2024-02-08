@@ -610,7 +610,9 @@
         "required": true,
         "response": {
           "status": 400,
-          "body": {}
+          "body": {
+            "message": "Invalid idempotency-key"
+          }
         }
       }
     },
@@ -620,14 +622,18 @@
         "required": true,
         "response": {
           "status": 400,
-          "body": {}
+          "body": {
+            "message": "Invalid txn_ref"
+          }
         }
       },
       "txn_amount": {
         "type": "object",
         "response": {
           "status": 400,
-          "body": {}
+          "body": {
+            "message": "Invalid txn_amount"
+          }
         }
       },
       "description": {
@@ -635,7 +641,9 @@
         "required": true,
         "response": {
           "status": 400,
-          "body": {}
+          "body": {
+            "message": "Invalid description"
+          }
         }
       },
       "biller_id": {
@@ -643,7 +651,9 @@
         "required": true,
         "response": {
           "status": 400,
-          "body": {}
+          "body": {
+            "message": "Invalid biller_id"
+          }
         }
       },
       "tokenised_card": {
@@ -651,7 +661,9 @@
         "required": true,
         "response": {
           "status": 400,
-          "body": {}
+          "body": {
+            "message": "Invalid tokenised_card"
+          }
         }
       }
     },
