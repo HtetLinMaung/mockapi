@@ -601,5 +601,63 @@
         }
       ]
     }
+  },
+  {
+    "url": "/v1/users/payment",
+    "method": "post",
+    "headers": {
+      "idempotency-key": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "body": {
+      "txn_ref": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "txn_amount": {
+        "type": "object",
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "description": {
+        "type": "string",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "biller_id": {
+        "type": "number",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "tokenised_card": {
+        "type": "object",
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {}
+    }
   }
 ]
