@@ -671,5 +671,53 @@
       "status": 200,
       "body": {}
     }
+  },
+  {
+    "url": "/v1/users/transactions",
+    "method": "get",
+    "query": {
+      "page": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "size": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
+      "sort": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": []
+    }
+  },
+  {
+    "url": "/v1/users/transactions",
+    "method": "delete",
+    "query": {
+      "id": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "body": {}
+    }
   }
 ]
