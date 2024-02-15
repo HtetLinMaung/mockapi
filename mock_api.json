@@ -83,6 +83,13 @@
           "body": {}
         }
       },
+      "X-USER-ID": {
+        "required": true,
+        "response": {
+          "status": 400,
+          "body": {}
+        }
+      },
       "Authorization": {
         "required": true,
         "response": {
