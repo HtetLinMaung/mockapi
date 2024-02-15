@@ -82,10 +82,8 @@
           "status": 400,
           "body": {}
         }
-      }
-    },
-    "query": {
-      "userid": {
+      },
+      "Authorization": {
         "required": true,
         "response": {
           "status": 400,
